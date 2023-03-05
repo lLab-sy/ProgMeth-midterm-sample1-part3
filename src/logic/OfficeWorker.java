@@ -11,13 +11,13 @@ public class OfficeWorker extends Employee {
 	@Override
 	public int computeSalary() {
 		// TODO Auto-generated method stub
-		return 0;
+		return BackEndAPI.calculateMonthlySalary(baseSalary, bonus, 20);
 	}
 
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return null;
+		return BackEndAPI.getOfficeWorkerDescription(id, name, department, bonus);
 	}
 
 	public String getDepartment() {
