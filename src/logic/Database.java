@@ -42,10 +42,20 @@ public class Database {
 	
 	public ArrayList<String> getAllEmployeeDescriptions(){
 		/* FILL CODES*/
+		ArrayList<String> employeeDecriptionList = new ArrayList<String>();
+		for(Employee employee: employees) {
+			employeeDecriptionList.add(employee.getDescription());
+		}
+		return employeeDecriptionList;
 	}
 	
 	public int calculateAllSalary() {
 		/* FILL CODES*/
+		int totalEmployeeSalary = 0;
+		for(Employee employee: employees) {
+			totalEmployeeSalary += employee.computeSalary();
+		}
+		return totalEmployeeSalary;
 	}
 	
 	public int getTotalEmployeeCount() {
